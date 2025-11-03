@@ -2,6 +2,7 @@ from src.data import *
 import random
 
 def filter_by_currency(transactions_list, currency="USD"):
+    '''поочередно возврощает библеотеку с транзакцией если переменная "code" равна задаваемой переменной "currency"'''
     for transaction in transactions_list:
         if transaction.get("currency") == currency:
             yield transaction
@@ -16,6 +17,7 @@ print(next(currency_gen))
 
 
 def transaction_descriptions(transactions_list):
+    '''поочередно возврощает информация о транзакции'''
     for i in range(len(transactions_list)):
         yield transactions_list[i]["description"]
 
@@ -30,10 +32,11 @@ print(next(generator))
 
 
 def generate_card_number(start=1, end=9999999999999999):
+    '''генерирует случайный номер банковской карты взависимости от указанных значений'''
     number = random.randint(start, end)
     number_str = str(number).zfill(16)
     formatted = f"{number_str[:4]} {number_str[4:8]} {number_str[8:12]} {number_str[12:16]}"
-    return formatted
+    yield formatted
 
 
 # Примеры использования
