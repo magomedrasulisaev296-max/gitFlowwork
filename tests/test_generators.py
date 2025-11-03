@@ -1,4 +1,4 @@
-from src.generators import filter_by_currency, transaction_descriptions, generate_card_number
+from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
 
 
 def test_filter_by_currency():
@@ -27,11 +27,11 @@ def test_transaction_descriptions():
     assert next(gen) == "Test 2"
 
 
-def test_generate_card_number():
-    card = generate_card_number(1, 1)
+def test_card_number_generator():
+    card = next(card_number_generator(1, 1))
     assert card == "0000 0000 0000 0001"
 
 
-def test_generate_card_number_format():
-    card = generate_card_number(1234567890123456, 1234567890123456)
+def test_card_number_generator_format():
+    card = next(card_number_generator(1234567890123456, 1234567890123456))
     assert card == "1234 5678 9012 3456"

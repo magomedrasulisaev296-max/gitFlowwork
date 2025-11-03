@@ -39,6 +39,6 @@ def card_number_generator(start=1, end=9999999999999999):
     yield formatted
 
 
-# Примеры использования
-print(generate_card_number(1, 100))
-print(generate_card_number(1, 1))
+
+print(next(card_number_generator(1, 100)))
+print(next(card_number_generator(1, 1)))
