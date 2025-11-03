@@ -23,7 +23,7 @@ git clone https://github.com/magomedrasulisaev296-max/gitFlowwork/tree/feature
 - `filter_by_currency()` - фильтрация транзакций по валюте
 - `transaction_descriptions()` - получение описаний транзакций  
 - `generate_card_number()` - генерация номеров банковских карт
-
+    
 ### Тесты (`tests/test_generators.py`)
 Набор тестов для проверки работы генераторов:
 

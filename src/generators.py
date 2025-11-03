@@ -31,7 +31,7 @@ print(next(generator))
 print(next(generator))
 
 
-def generate_card_number(start=1, end=9999999999999999):
+def card_number_generator(start=1, end=9999999999999999):
     '''генерирует случайный номер банковской карты взависимости от указанных значений'''
     number = random.randint(start, end)
     number_str = str(number).zfill(16)
