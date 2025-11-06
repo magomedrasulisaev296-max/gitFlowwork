@@ -1,4 +1,4 @@
-from src.data import *
+from src.dictionary import *
 import random
 from typing import Generator, Dict, Any
 
