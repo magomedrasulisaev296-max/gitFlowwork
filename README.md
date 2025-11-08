@@ -1,4 +1,4 @@
-# проект homework
+# проект Gitflowwork
 
 ## описание:
 -суть проекта:
@@ -9,9 +9,25 @@
 
 1. Клонируйте репозиторий:
 ```
-git clone https://github.com/username/project-x.git
+git clone https://github.com/magomedrasulisaev296-max/gitFlowwork/tree/feature
 ```
 2. Установите зависимости:
 ```
-pip install -r requirements.txt
+-
 ```
+## Новые модули
+
+### Генераторы (`src/generators.py`)
+Модуль содержит функции для работы с финансовыми данными:
+
+- `filter_by_currency()` - фильтрация транзакций по валюте
+- `transaction_descriptions()` - получение описаний транзакций  
+- `generate_card_number()` - генерация номеров банковских карт
+    
+### Тесты (`tests/test_generators.py`)
+Набор тестов для проверки работы генераторов:
+
+- Тесты фильтрации по валюте (USD, RUB)
+- Тесты формата номеров карт
+- Проверка сохранения ведущих нулей
+- Тесты поведения генераторов

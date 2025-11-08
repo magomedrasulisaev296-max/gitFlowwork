@@ -1,5 +1,5 @@
 # функция для выдачи словаря в зависимости от уровня сложности
-def choose_difficulty(diffucult):
+def choose_difficulty(diffucult:str) -> dict:
     words_easy = {
         "family": "семья",
         "hand": "рука",
@@ -47,7 +47,7 @@ questions_and_answers = choose_difficulty(test_diffucult)
 
 
 # создаем основную логику игры
-def play_game(questions_and_answers):
+def play_game(questions_and_answers:dict) -> int:
     answers = list(questions_and_answers.values())
     questions = list(questions_and_answers.keys())
     right_answers = 0
@@ -69,14 +69,14 @@ right_answers = play_game(questions_and_answers)
 print("пора узнать результаты!")
 
 
-def calculate_rank(levels):
+def calculate_rank(levels:dict) -> int:
     rank = 0
     if right_answers >= 0:
         rank = levels[right_answers]
     return rank
 
 
-def display_results(rank):
+def display_results(rank:int) -> None:
     print(rank)
 
 
