@@ -26,7 +26,7 @@ def load_transactions(file_path: str) -> List[Dict[str, Any]]:
 
         # Проверим существует ли файл
         if not os.path.exists(file_path):
-            Logger.warning("file not found, check way or file file type")
+            Logger.warning("file not found, check way to file or file type")
             print(f"❌ Файл НЕ СУЩЕСТВУЕТ: {file_path}")
             print(f"Текущая директория: {os.getcwd()}")
             print(f"Содержимое текущей директории: {os.listdir('.')}")
