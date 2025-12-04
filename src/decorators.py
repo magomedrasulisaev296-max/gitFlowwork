@@ -1,4 +1,5 @@
-from typing import Callable, Any, Optional
+from typing import Any, Callable, Optional
+
 
 def log(filename: Optional[str] = None) -> Callable:
     '''при вызове выводит сообщение func.name "started" а после отрабатывания функции выводит func.name "finished"'''

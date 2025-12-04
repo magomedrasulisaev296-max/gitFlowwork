@@ -12,7 +12,7 @@ logger.addHandler(file_handler)
 
 import json
 import os
-from typing import List, Dict, Any
+from typing import Any, Dict, List
 
 
 def load_transactions(file_path: str) -> List[Dict[str, Any]]:

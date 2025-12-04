@@ -1,6 +1,7 @@
-from src.dictionary import *
 import random
-from typing import Generator, Dict, Any
+from typing import Any, Dict, Generator
+
+from src.dictionary import *
 
 
 def filter_by_currency(transactions_list: list, currency: str = "USD") -> Generator[Dict[str, Any], None, None]:

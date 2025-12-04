@@ -1,7 +1,8 @@
 import pytest  # type: ignore
+
 from src.masks import *
-from src.widget import *
 from src.processing import *
+from src.widget import *
 
 
 def test_masks() -> None:
